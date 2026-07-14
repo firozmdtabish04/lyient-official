@@ -9,6 +9,7 @@ import DropdownContact from "./dropdown/DropdownContact";
 import MobileDrawer from "./dropdown/MobileDrawer";
 import { Menu } from "lucide-react";
 import { isAuthenticated, getUser, logout } from "../../utils/auth";
+import lyient from "../../assets/Lyient.png";
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   let user;
@@ -190,12 +191,12 @@ rounded-xl sm:rounded-2xl
 shadow-md"
             >
               {/* LOGO */}
-              <h1
+              <img
+                src={lyient}
+                alt="Lyient Solutions"
                 onClick={() => navigate("/")}
-                className="flex-shrink-0 text-lg sm:text-xl lg:text-2xl font-bold"
-              >
-                Lyient
-              </h1>
+                className="h-8 sm:h-10 lg:h-12 w-auto cursor-pointer flex-shrink-0 object-contain"
+              />
 
               {/* DESKTOP */}
               <div className="hidden lg:flex items-center gap-4 xl:gap-6">
