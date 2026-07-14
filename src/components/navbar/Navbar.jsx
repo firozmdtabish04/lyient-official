@@ -179,9 +179,13 @@ function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="bg-transparent py-3 sm:py-5 lg:py-6">
-          <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div
+        className={`fixed top-10 left-0 w-full z-50 transition-all duration-300 ${
+          showNav ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="bg-transparent py-3 sm:py-5 lg:py-6">
             <nav
               className="bg-[#0e0e0e]/95 backdrop-blur-md text-white
 px-3 sm:px-5 lg:px-6

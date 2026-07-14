@@ -8,7 +8,7 @@ function Home() {
       <div className="uniform-glow"></div>
 
       {/* Grid container */}
-      <div className="max-w-[1200px] mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 sm:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
         {/* LEFT */}
         <div>
           {/* Tag */}
@@ -17,7 +17,7 @@ function Home() {
           </span>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
             Simply better hosting <br />
             <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
               for WordPress.
@@ -42,7 +42,7 @@ function Home() {
           </div>
 
           {/* Stats */}
-          <div className="mt-10 flex gap-8 text-sm text-gray-600">
+          <div className="mt-10 grid grid-cols-3 gap-4 text-center md:flex md:gap-8">
             <div>
               <p className="text-xl font-bold text-black">120K+</p>
               Customers
@@ -65,7 +65,7 @@ function Home() {
             <img
               src="https://images.unsplash.com/photo-1551434678-e076c223a692"
               alt="Hero"
-              className="w-full h-[400px] object-cover group-hover:scale-105 transition duration-500"
+              className="w-full h-[250px] sm:h-[350px] lg:h-[420px] object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
 
