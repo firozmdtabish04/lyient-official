@@ -182,7 +182,7 @@ export default function Register() {
               <p className="text-sm text-gray-300">Developed by</p>
               <h2 className="mt-1 text-xl font-bold sm:text-2xl">
                 <span className="text-orange-300">
-                  <TypingText texts={["Tabish Firoz", "Abhilipsa Pati"]} />
+                  <TypingText texts={["Tabish Firoz"]} />
                 </span>
               </h2>
             </div>
