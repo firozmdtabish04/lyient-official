@@ -246,16 +246,16 @@ function HomeHeroPremium() {
 
             {/* Labels */}
             <span className="absolute top-2 left-4 text-xs text-gray-400">
-              Contenders
+              Production Experience
             </span>
             <span className="absolute top-2 right-4 text-xs text-gray-400">
-              Leaders
-            </span>
-            <span className="absolute bottom-2 left-4 text-xs text-gray-400">
-              Niche
+              Job Ready
             </span>
             <span className="absolute bottom-2 right-4 text-xs text-gray-400">
-              High Performers
+              <span className="absolute bottom-2 left-4 text-xs text-gray-400">
+                Professional Experience
+              </span>
+              Internship Ready
             </span>
 
             {/* ICONS */}

@@ -32,7 +32,7 @@ function Footer() {
             <li>Expert support</li>
             <li>Free WordPress migrations</li>
             <li>APM tool</li>
-            <li>DevKinsta</li>
+            <li>Lyient</li>
             <li>Edge caching</li>
             <li>Add-ons</li>
           </ul>

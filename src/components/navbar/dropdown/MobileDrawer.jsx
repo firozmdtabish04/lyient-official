@@ -34,7 +34,7 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
       >
         {/* Header */}
         <div className="p-5 flex justify-between items-center border-b border-gray-800">
-          <h1 className="text-xl font-bold">AICore</h1>
+          <h1 className="text-xl font-bold">Lyient</h1>
           <button
             onClick={() => setOpen(false)}
             className="text-2xl px-3 py-1 border border-gray-600 rounded-md"

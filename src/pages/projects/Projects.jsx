@@ -29,7 +29,7 @@ const projects = [
       "AI-powered ecosystem with chatbot, PDF summarizer, resume analyzer, and automation tools.",
     longDescription:
       "A central AI workspace designed to bring useful student and developer tools into one product experience. It focuses on fast task completion, clean navigation, and practical AI workflows.",
-    link: "https://aicore-latest.vercel.app/",
+    link: "https://lyient-official.vercel.app/",
     github: "#",
     tech: ["React", "Spring Boot", "AI"],
     category: "AI",

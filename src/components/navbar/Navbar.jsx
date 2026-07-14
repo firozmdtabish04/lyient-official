@@ -73,7 +73,7 @@ function Navbar() {
 
     { name: "Tools & Insights", path: "/tools", category: "Resources" },
     {
-      name: "Kinsta vs Competition",
+      name: "Lyient vs Competition",
       path: "/compare",
       category: "Resources",
     },
@@ -184,19 +184,19 @@ function Navbar() {
         }`}
         onMouseLeave={handleLeave}
       >
-        <div className="bg-[#f5f5f5] py-4">
-          <div className="max-w-[1200px] mx-auto px-4">
+        <div className="bg-[#f5f5f5] py-6">
+          <div className="max-w-[1300px] mx-auto ">
             <nav className="bg-[#0e0e0e]/95 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center rounded-2xl shadow-md">
               {/* LOGO */}
               <h1
                 onClick={() => navigate("/")}
                 className="text-xl font-bold cursor-pointer"
               >
-                AICore
+                Lyient
               </h1>
 
               {/* DESKTOP */}
-              <div className="hidden md:flex gap-8 items-center">
+              <div className="hidden md:flex gap-6 items-center">
                 <Link to="/">Home</Link>
                 <Link to="/project">Projects</Link>
                 <Link to="/price">Pricing</Link>

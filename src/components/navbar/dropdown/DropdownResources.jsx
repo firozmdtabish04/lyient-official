@@ -46,7 +46,7 @@ export default function DropdownResources() {
         <ul className="space-y-3 text-gray-400">
           <li>
             <Link to="/compare" className="hover:text-orange-500 transition">
-              AICore vs. the competition
+              Lyient vs. the competition
             </Link>
           </li>
           <li>
