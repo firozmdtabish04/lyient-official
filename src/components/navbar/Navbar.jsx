@@ -7,6 +7,7 @@ import DropdownSolutions from "./dropdown/DropdownSolutions";
 import DropdownResources from "./dropdown/DropdownResources";
 import DropdownContact from "./dropdown/DropdownContact";
 import MobileDrawer from "./dropdown/MobileDrawer";
+import { Menu } from "lucide-react";
 import { isAuthenticated, getUser, logout } from "../../utils/auth";
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
@@ -177,26 +178,27 @@ function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <div
-        ref={navRef}
-        className={`fixed top-0 left-0 w-full z-[999] transition-transform duration-300 ${
-          showNav ? "translate-y-0" : "-translate-y-full"
-        }`}
-        onMouseLeave={handleLeave}
-      >
-        <div className="bg-[#f5f5f5] py-6">
-          <div className="max-w-[1300px] mx-auto ">
-            <nav className="bg-[#0e0e0e]/95 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center rounded-2xl shadow-md">
+      <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="bg-transparent py-3 sm:py-5 lg:py-6">
+          <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
+            <nav
+              className="bg-[#0e0e0e]/95 backdrop-blur-md text-white
+px-3 sm:px-5 lg:px-6
+py-3 sm:py-4
+flex justify-between items-center
+rounded-xl sm:rounded-2xl
+shadow-md"
+            >
               {/* LOGO */}
               <h1
                 onClick={() => navigate("/")}
-                className="text-xl font-bold cursor-pointer"
+                className="flex-shrink-0 text-lg sm:text-xl lg:text-2xl font-bold"
               >
                 Lyient
               </h1>
 
               {/* DESKTOP */}
-              <div className="hidden md:flex gap-6 items-center">
+              <div className="hidden lg:flex items-center gap-4 xl:gap-6">
                 <Link to="/">Home</Link>
                 <Link to="/project">Projects</Link>
                 <Link to="/price">Pricing</Link>
@@ -247,7 +249,7 @@ function Navbar() {
 
                     {/* Dropdown */}
                     {showProfile && (
-                      <div className="absolute right-0 mt-3 w-72 bg-black/90 border border-white/10 rounded-xl shadow-xl p-4 animate-fadeIn">
+                      <div className="absolute right-0 mt-3 w-64 sm:w-72 max-w-[90vw] bg-black/90 border border-white/10 rounded-xl shadow-xl p-4 animate-fadeIn">
                         <p className="text-white text-sm mb-2">
                           {user?.name || "User"}
                         </p>
@@ -268,7 +270,15 @@ function Navbar() {
                   <Link to="/login">Login</Link>
                 )}
 
-                <button className="bg-white text-black px-4 py-1 rounded hover:bg-gray-200 transition">
+                <button
+                  className="
+hidden xl:block
+bg-white text-black
+px-4 py-2
+rounded-lg
+hover:bg-gray-200
+transition"
+                >
                   Try for free
                 </button>
               </div>
@@ -276,9 +286,9 @@ function Navbar() {
               {/* MOBILE */}
               <button
                 onClick={() => setOpen(true)}
-                className="md:hidden text-2xl"
+                className="lg:hidden p-2 rounded-md hover:bg-white/10 transition"
               >
-                ☰
+                <Menu size={24} />
               </button>
             </nav>
           </div>
@@ -286,9 +296,9 @@ function Navbar() {
 
         {/* DROPDOWN */}
         {activeDropdown && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-[90px] w-full px-4 z-50">
+          <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-full px-4 z-50">
             <div
-              className="max-w-[1100px] mx-auto animate-fadeIn"
+              className="w-full max-w-6xl mx-auto px-2 sm:px-4 animate-fadeIn"
               onMouseEnter={() => clearTimeout(timeoutRef.current)}
               onMouseLeave={handleLeave}
             >
