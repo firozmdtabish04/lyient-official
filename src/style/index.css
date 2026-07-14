@@ -212,18 +212,109 @@ body {
 .animate-shake {
   animation: shake 0.3s ease;
 }
-@keyframes loading {
-  0% {
-    transform: translateX(-100%);
-    width: 20%;
+/* Fade In */
+@keyframes loaderFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-loader-fade {
+  animation: loaderFade 0.6s ease;
+}
+
+/* Floating Logo */
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
   }
 
   50% {
-    width: 60%;
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+.animate-logo-float {
+  animation: logoFloat 2.5s ease-in-out infinite;
+}
+
+/* Glow */
+@keyframes glow {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.animate-logo-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Slow Ring */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 3s linear infinite;
+}
+
+/* Progress */
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
   }
 
   100% {
-    transform: translateX(450%);
-    width: 20%;
+    transform: translateX(250%);
+  }
+}
+
+.loader-progress {
+  width: 40%;
+  animation: progress 1.8s ease-in-out infinite;
+}
+
+/* Loading Dots */
+
+.loading-dots::after {
+  content: "";
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: "";
+  }
+
+  25% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  75% {
+    content: "...";
+  }
+
+  100% {
+    content: "";
   }
 }

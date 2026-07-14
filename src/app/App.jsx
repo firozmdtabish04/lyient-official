@@ -17,33 +17,32 @@ function App() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Change duration if needed
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Hide layout for auth pages
   const hideLayout =
     location.pathname === "/login" || location.pathname === "/register";
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <>
-      {loading && <Loader />}
+    <div className="min-h-screen relative page-fade">
+      {!hideLayout && <Navbar />}
 
-      <div className="min-h-screen relative">
-        {!hideLayout && <Navbar />}
+      <main className={hideLayout ? "" : "pt-[90px]"}>
+        <Outlet />
+      </main>
 
-        <main className={hideLayout ? "" : "pt-[90px]"}>
-          <Outlet />
-        </main>
+      {!hideLayout && <FloatingChat />}
 
-        {!hideLayout && <FloatingChat />}
+      <ScrollToTopButton />
 
-        <ScrollToTopButton />
-
-        {!hideLayout && <Footer />}
-      </div>
-    </>
+      {!hideLayout && <Footer />}
+    </div>
   );
 }
 

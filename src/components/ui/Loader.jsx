@@ -1,39 +1,29 @@
 import React from "react";
-import lyientLogo from "../../assets/Lyient.png";
+import lyient from "../../assets/Lyient.png";
 
 function Loader() {
   return (
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#050505] overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute w-[450px] h-[450px] rounded-full bg-cyan-500/10 blur-3xl animate-pulse" />
-      <div className="absolute w-[350px] h-[350px] rounded-full bg-orange-500/10 blur-3xl animate-pulse delay-300" />
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-black animate-loader-fade">
+      {/* Background */}
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-orange-500/10 blur-[150px] animate-pulse"></div>
 
-      {/* Content */}
+      <div className="absolute w-[350px] h-[350px] rounded-full bg-sky-500/10 blur-[120px] top-10 right-20 animate-pulse delay-300"></div>
+
       <div className="relative flex flex-col items-center">
         {/* Logo */}
-        <img
-          src={lyientLogo}
-          alt="Lyient"
-          className="w-56 drop-shadow-[0_0_30px_rgba(34,211,238,0.35)] animate-bounce"
-        />
+        <div className="relative flex items-center justify-center">
+          {/* Glow */}
+          <div className="absolute w-36 h-36 rounded-full bg-orange-500/20 blur-3xl animate-logo-glow"></div>
 
-        {/* Text */}
-        <h2 className="mt-8 text-white text-xl font-semibold tracking-wide">
-          Initializing Platform
-        </h2>
+          {/* Ring */}
+          <div className="absolute w-36 h-36 rounded-full border-[3px] border-transparent border-t-orange-500 border-r-orange-400 animate-spin-slow"></div>
 
-        <p className="mt-2 text-gray-400 text-sm flex items-center">
-          Please wait
-          <span className="ml-1 flex gap-1">
-            <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce"></span>
-            <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce [animation-delay:150ms]"></span>
-            <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce [animation-delay:300ms]"></span>
-          </span>
-        </p>
-
-        {/* Progress Bar */}
-        <div className="mt-8 w-72 h-1 rounded-full bg-white/10 overflow-hidden">
-          <div className="h-full w-1/2 bg-gradient-to-r from-cyan-400 to-orange-400 animate-[loading_1.8s_ease-in-out_infinite]" />
+          {/* Logo */}
+          <img
+            src={lyient}
+            alt="Lyient"
+            className="relative w-28 md:w-32 animate-logo-float"
+          />
         </div>
       </div>
     </div>
