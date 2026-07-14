@@ -181,7 +181,7 @@ function Navbar() {
       {/* NAVBAR */}
       <div
         className={`fixed top-10 left-0 w-full z-50 transition-all duration-300 ${
-          showNav ? "translate-y-0" : "-translate-y-full"
+          showNav && !open ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">

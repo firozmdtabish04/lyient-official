@@ -26,7 +26,7 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[85%] max-w-sm 
+        className={`fixed top-0 right-0 h-full w-[82%] sm:w-[380px] max-w-sm 
         bg-[#0f0f0f]/95 backdrop-blur-xl text-white z-50 
         transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"

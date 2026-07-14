@@ -15,19 +15,21 @@ function TopBar() {
         <div className="flex items-center justify-center md:justify-between">
           {/* Contact Details (Desktop Only) */}
           <div className="hidden md:flex items-center gap-6 text-sm">
+            {/* Email */}
             <a
               href="mailto:info@yourcompany.com"
-              className="flex items-center gap-2 hover:text-orange-400 transition"
+              className="flex items-center gap-2 text-white hover:text-orange-400 transition"
             >
-              <FaEnvelope className="text-orange-400" />
+              <FaEnvelope className="text-[#EA4335] text-base" />
               <span>info@yourcompany.com</span>
             </a>
 
+            {/* Phone */}
             <a
               href="tel:+919876543210"
-              className="flex items-center gap-2 hover:text-orange-400 transition"
+              className="flex items-center gap-2 text-white hover:text-orange-400 transition"
             >
-              <FaPhoneAlt className="text-orange-400" />
+              <FaPhoneAlt className="text-[#25D366] text-base" />
               <span>+91 98765 43210</span>
             </a>
           </div>
@@ -39,9 +41,9 @@ function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-orange-500 transition duration-300 flex items-center justify-center"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
             >
-              <FaFacebookF />
+              <FaFacebookF className="text-[#1877F2]" />
             </a>
 
             <a
@@ -49,9 +51,9 @@ function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-orange-500 transition duration-300 flex items-center justify-center"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
             >
-              <FaTwitter />
+              <FaTwitter className="text-[#1DA1F2]" />
             </a>
 
             <a
@@ -59,9 +61,9 @@ function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-orange-500 transition duration-300 flex items-center justify-center"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
             >
-              <FaLinkedinIn />
+              <FaLinkedinIn className="text-[#0A66C2]" />
             </a>
 
             <a
@@ -69,9 +71,9 @@ function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-green-500 transition duration-300 flex items-center justify-center"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
             >
-              <FaWhatsapp />
+              <FaWhatsapp className="text-[#25D366]" />
             </a>
           </div>
         </div>

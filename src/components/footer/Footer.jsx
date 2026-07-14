@@ -147,8 +147,8 @@ function Footer() {
       {/* COPYRIGHT */}
       <div className="max-w-[1200px] mx-auto px-6 py-6 text-xs text-gray-500">
         <p>
-          © 2013–2026 AICare Inc. All rights reserved. AICare®, MyAICare®,and
-          AbhiAICare®, are trademarks owned by AICare Inc.
+          © 2026 Lyient Solutions Inc. All rights reserved. AICare®,
+          MyAICare®,and AbhiAICare®, are trademarks owned by AICare Inc.
         </p>
         <p className="mt-2">
           The WordPress® trademark is the intellectual property of the WordPress

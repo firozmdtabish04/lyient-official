@@ -1,7 +1,6 @@
 import React from "react";
 import { Star, ArrowRight } from "lucide-react";
 import {
-  SiOpenai,
   SiMongodb,
   SiReact,
   SiNodedotjs,
@@ -16,6 +15,8 @@ import {
   SiMysql,
   SiHtml5,
 } from "react-icons/si";
+import { FaRobot } from "react-icons/fa";
+
 import { FaAws, FaJava } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 const badges = [
@@ -29,8 +30,8 @@ const badges = [
 
 const icons = [
   {
-    Icon: SiOpenai,
-    name: "OpenAI",
+    Icon: FaRobot,
+    name: "AI",
     color: "#10A37F",
     pos: "top-[20%] left-[25%]",
     anim: "animate-float",
@@ -295,7 +296,7 @@ function HomeHeroPremium() {
             <div className="absolute top-[25%] right-[5%] z-10 ">
               <div className="absolute inset-0 bg-orange-500/30 blur-2xl rounded-2xl animate-pulseGlow"></div>
               <div className="relative w-14 h-14 bg-orange-500 rounded-2xl flex items-center justify-center animate-floatLeader shadow-xl">
-                <SiOpenai size={28} color="white" />
+                <FaRobot size={28} color="white" />
               </div>
               <h1 className="font-bold text-orange-500 text-xl">
                 Lea<span className="text-white">Der</span>
