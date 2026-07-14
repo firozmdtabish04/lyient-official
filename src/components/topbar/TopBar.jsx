@@ -1,59 +1,71 @@
 import React from "react";
 import {
   FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
   FaWhatsapp,
   FaEnvelope,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function TopBar() {
   return (
-    <div className="bg-black text-white border-b border-white/10">
-      <div className="max-w-screen-2xl mx-auto px-4 py-2">
-        <div className="flex items-center justify-center md:justify-between">
-          {/* Contact Details (Desktop Only) */}
-          <div className="hidden md:flex items-center gap-6 text-sm">
-            {/* Email */}
-            <a
-              href="mailto:info@yourcompany.com"
-              className="flex items-center gap-2 text-white hover:text-orange-400 transition"
-            >
-              <FaEnvelope className="text-[#EA4335] text-base" />
-              <span>info@yourcompany.com</span>
-            </a>
+    <div className="w-full bg-black text-white border-b border-white/10">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="h-10 sm:h-11 md:h-12 flex items-center justify-between">
+          {/* Left Side */}
+          <div className="flex items-center">
+            {/* Desktop */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm">
+              <a
+                href="mailto:info@lyient.com"
+                className="flex items-center gap-2 hover:text-orange-400 transition-colors duration-300"
+              >
+                <FaEnvelope className="text-red-500 text-base" />
+                <span>info@lyient.com</span>
+              </a>
 
-            {/* Phone */}
-            <a
-              href="tel:+919876543210"
-              className="flex items-center gap-2 text-white hover:text-orange-400 transition"
-            >
-              <FaPhoneAlt className="text-[#25D366] text-base" />
-              <span>+91 98765 43210</span>
-            </a>
+              <a
+                href="tel:+919740255585"
+                className="flex items-center gap-2 hover:text-orange-400 transition-colors duration-300"
+              >
+                <FaPhoneAlt className="text-green-500 text-base" />
+                <span>+91 9740255585</span>
+              </a>
+            </div>
+
+            {/* Mobile */}
+            <div className="flex md:hidden items-center gap-2 text-[11px] sm:text-xs">
+              <FaPhoneAlt className="text-green-500 text-xs" />
+              <a
+                href="tel:+919740255585"
+                className="hover:text-orange-400 transition"
+              >
+                +91 9740255585
+              </a>
+            </div>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center justify-center gap-3">
+          {/* Right Side */}
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+              className="text-[#1877F2] hover:scale-110 transition-transform duration-300"
             >
-              <FaFacebookF className="text-[#1877F2]" />
+              <FaFacebookF className="text-sm sm:text-base md:text-lg" />
             </a>
 
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+              aria-label="X"
+              className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300"
             >
-              <FaTwitter className="text-[#1DA1F2]" />
+              <FaXTwitter className="text-sm sm:text-base md:text-lg" />
             </a>
 
             <a
@@ -61,19 +73,20 @@ function TopBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+              className="text-[#0A66C2] hover:scale-110 transition-transform duration-300"
             >
-              <FaLinkedinIn className="text-[#0A66C2]" />
+              <FaLinkedinIn className="text-sm sm:text-base md:text-lg" />
             </a>
 
+            {/* Hide WhatsApp on very small devices */}
             <a
-              href="https://wa.me/918102946894?text=Hello%20Lyient%20Solutions,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+              href="https://wa.me/918102946894"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition duration-300 flex items-center justify-center"
+              className="hidden xs:block text-[#25D366] hover:scale-110 transition-transform duration-300"
             >
-              <FaWhatsapp className="text-[#25D366]" />
+              <FaWhatsapp className="text-sm sm:text-base md:text-lg" />
             </a>
           </div>
         </div>

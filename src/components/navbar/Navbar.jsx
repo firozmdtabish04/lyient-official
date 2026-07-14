@@ -180,7 +180,7 @@ function Navbar() {
     <>
       {/* NAVBAR */}
       <div
-        className={`fixed top-10 left-0 w-full z-50 transition-all duration-300 ${
+        className={`sticky top-0 w-full z-50 transition-all duration-300 ${
           showNav && !open ? "translate-y-0" : "-translate-y-full"
         }`}
       >
