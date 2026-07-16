@@ -228,7 +228,7 @@ function HomeHeroPremium() {
 
             {/* Secondary */}
             <button className="px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">
-              <Link to="/price">View Pricing</Link>
+              <Link to="/products">View Products</Link>
             </button>
           </div>
         </div>

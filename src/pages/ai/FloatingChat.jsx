@@ -94,7 +94,7 @@ export default function FloatingChat() {
             Opening CRM Portal
           </p>
           <p className="text-xs text-gray-500 mt-1 leading-5">
-            Connecting you to the Lyient CRM platform for secure access.
+            Connecting you to the Lyient CRM platform.
           </p>
         </div>
       )}

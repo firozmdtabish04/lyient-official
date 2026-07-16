@@ -66,8 +66,8 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
             </Link>
           </div>
           <div className="space-y-3 border-b border-gray-800 pb-4">
-            <Link to="/price" onClick={() => setOpen(false)}>
-              Pricing
+            <Link to="/products" onClick={() => setOpen(false)}>
+              Products
             </Link>
           </div>
 
@@ -106,23 +106,10 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
           </div>
 
           {/* ================= SOLUTIONS ================= */}
-          <div>
-            <button
-              onClick={() => toggle("solutions")}
-              className="w-full flex justify-between items-center py-3 border-b border-gray-800"
-            >
-              <span>Solutions</span>
-              <span>{active === "solutions" ? "−" : "+"}</span>
-            </button>
-
-            {active === "solutions" && (
-              <div className="pl-4 pt-3 space-y-2 text-gray-400 text-sm flex flex-col">
-                <Link to="/agency">Agency</Link>
-                <Link to="/small-business">Small Business</Link>
-                <Link to="/enterprise">Enterprise</Link>
-                <Link to="/education">Education</Link>
-              </div>
-            )}
+          <div className="space-y-3 border-b border-gray-800 pb-4">
+            <Link to="/team" onClick={() => setOpen(false)}>
+              Our Team
+            </Link>
           </div>
 
           {/* ================= RESOURCES ================= */}
@@ -156,7 +143,6 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
 
             {active === "contact" && (
               <div className="pl-4 pt-3 space-y-2 text-gray-400 text-sm flex flex-col">
-                <Link to="/about">About</Link>
                 <Link to="/services">Services</Link>
                 <Link to="/join-group">Community</Link>
               </div>
@@ -184,7 +170,7 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
 
           {/* 🚀 CTA */}
           <button className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-gray-200 transition">
-            <Link to="/price">Try for free</Link>
+            <Link to="/products">Try for free</Link>
           </button>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { ICONS } from "../ui/icons";
 import SearchOverlay from "../ui/SearchOverlay";
 import DropdownAi from "./dropdown/DropdownAi";
-import DropdownSolutions from "./dropdown/DropdownSolutions";
 import DropdownResources from "./dropdown/DropdownResources";
 import DropdownContact from "./dropdown/DropdownContact";
 import MobileDrawer from "./dropdown/MobileDrawer";
@@ -26,7 +25,7 @@ function Navbar() {
   const pages = [
     // General
     { name: "Home", path: "/", category: "General" },
-    { name: "Pricing", path: "/price", category: "General" },
+    { name: "Products", path: "/products", category: "General" },
     { name: "AI Overview", path: "/ai", category: "General" },
 
     // AI Tools
@@ -40,27 +39,6 @@ function Navbar() {
     { name: "LOR Generator", path: "/ai/lor", category: "AI" },
     { name: "Resume Analyzer", path: "/ai/resume", category: "AI" },
     { name: "Code Assistant", path: "/ai/code", category: "AI" },
-
-    // Solutions
-    { name: "Agency", path: "/agency", category: "Solutions" },
-    { name: "Small Business", path: "/small-business", category: "Solutions" },
-    { name: "Enterprise", path: "/enterprise", category: "Solutions" },
-    { name: "Education", path: "/education", category: "Solutions" },
-    { name: "WooCommerce Store", path: "/woocommerce", category: "Solutions" },
-    {
-      name: "Non-Profit Organization",
-      path: "/non-profit",
-      category: "Solutions",
-    },
-    {
-      name: "High-Resource Site",
-      path: "/high-resource",
-      category: "Solutions",
-    },
-
-    { name: "Partnership Programs", path: "/programs", category: "Solutions" },
-    { name: "Affiliate Program", path: "/affiliate", category: "Solutions" },
-    { name: "Agency Partner Program", path: "/partner", category: "Solutions" },
 
     // Resources
     { name: "Resource Center", path: "/resources", category: "Resources" },
@@ -206,14 +184,8 @@ shadow-md"
               <div className="hidden lg:flex items-center gap-4 xl:gap-6">
                 <Link to="/">Home</Link>
                 <Link to="/project">Projects</Link>
-                <Link to="/price">Pricing</Link>
-
-                <span
-                  onMouseEnter={() => handleEnter("solutions")}
-                  className="nav-item"
-                >
-                  Solutions <Chevron size={16} />
-                </span>
+                <Link to="/products">Products</Link>
+                <Link to="/team">Our Team</Link>
 
                 <span
                   onMouseEnter={() => handleEnter("resources")}
@@ -307,7 +279,6 @@ transition"
               onMouseEnter={() => clearTimeout(timeoutRef.current)}
               onMouseLeave={handleLeave}
             >
-              {activeDropdown === "solutions" && <DropdownSolutions />}
               {activeDropdown === "resources" && <DropdownResources />}
               {activeDropdown === "contact" && <DropdownContact />}
               {activeDropdown === "ai" && <DropdownAi />}

@@ -30,24 +30,6 @@ export default function DropdownContact() {
       desc: "Connect, learn, and grow with others",
       path: "/join-group",
     },
-    {
-      icon: faPaperPlane,
-      title: "Get in Touch",
-      desc: "Reach us via email, phone, or WhatsApp",
-      path: "/contact",
-    },
-    {
-      icon: faHeadset,
-      title: "Speak with Experts",
-      desc: "Get guidance from our sales specialists",
-      path: "/sales",
-    },
-    {
-      icon: faComments,
-      title: "Community Support",
-      desc: "Ask questions and get help instantly",
-      path: "/community",
-    },
   ];
 
   return (
