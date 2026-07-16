@@ -184,12 +184,12 @@ function Navbar() {
           showNav && !open ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="w-full max-w-screen-2xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="bg-transparent py-3 sm:py-5 lg:py-6">
+        <div className="w-full max-w-full-2xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="bg-transparent py-2">
             <nav
               className="bg-[#0e0e0e]/95 backdrop-blur-md text-white
 px-3 sm:px-5 lg:px-6
-py-3 sm:py-4
+py-3
 flex justify-between items-center
 rounded-xl sm:rounded-2xl
 shadow-md"

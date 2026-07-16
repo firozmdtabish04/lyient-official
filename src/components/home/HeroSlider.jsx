@@ -170,8 +170,22 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative overflow-hidden ">
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative overflow-hidden pt-0 pb-10">
+      <div
+        className="
+max-w-7xl
+mx-auto
+px-4
+sm:px-6
+lg:px-8
+grid
+grid-cols-1
+lg:grid-cols-2
+gap-10
+lg:gap-16
+items-center
+"
+      >
         {/* LEFT */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -181,11 +195,34 @@ export default function HeroSlider() {
             exit={{ opacity: 0, y: -70 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xl inline-block px-12 mt-6 py-4 rounded-full bg-orange-100 text-orange-600 font-semibold">
+            <span
+              className="
+inline-block
+text-xs
+sm:text-sm
+md:text-base
+lg:text-lg
+px-5
+sm:px-7
+lg:px-10
+py-2
+sm:py-3
+rounded-full
+bg-orange-100
+text-orange-600
+font-semibold
+mt-2
+"
+            >
               {slides[current].tag}
             </span>
-
-            <h1 className="mt-4 text-5xl lg:text-5xl font-black leading-tight">
+            <h1
+              className="mt-4 text-3xl
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
+leading-tight font-black "
+            >
               {slides[current].title}
               <br />
 
@@ -193,12 +230,23 @@ export default function HeroSlider() {
                 {slides[current].highlight}
               </span>
             </h1>
-
-            <p className="mt-8 text-lg text-gray-600 leading-8 max-w-xl">
+            <p
+              className="mt-8 text-base
+sm:text-lg
+leading-7
+sm:leading-8 text-gray-600  max-w-xl"
+            >
               {slides[current].description}
             </p>
-
-            <div className="flex gap-4 mt-10 flex-wrap">
+            <div
+              className="
+flex
+flex-col
+sm:flex-row
+gap-4
+mt-8
+"
+            >
               <Link
                 to="/contact"
                 className="px-7 py-4 rounded-xl bg-orange-500 text-white hover:bg-orange-600 transition"
@@ -213,20 +261,48 @@ export default function HeroSlider() {
                 Our Services
               </Link>
             </div>
-
+            <div
+              className="
+grid
+grid-cols-3
+gap-4
+sm:gap-8
+mt-6
+sm:mt-10
+text-center
+"
+            ></div>{" "}
             <div className="flex gap-10 mt-14">
               <div>
-                <h2 className="text-3xl font-bold">120+</h2>
+                <h2
+                  className="text-xl
+sm:text-2xl
+lg:text-3xl font-bold"
+                >
+                  120+
+                </h2>
                 <p className="text-gray-500">Projects</p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold">50+</h2>
+                <h2
+                  className="text-xl
+sm:text-2xl
+lg:text-3xl font-bold"
+                >
+                  50+
+                </h2>
                 <p className="text-gray-500">Clients</p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold">24/7</h2>
+                <h2
+                  className="text-xl
+sm:text-2xl
+lg:text-3xl font-bold"
+                >
+                  24/7
+                </h2>
                 <p className="text-gray-500">Support</p>
               </div>
             </div>
@@ -244,13 +320,22 @@ export default function HeroSlider() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.8 }}
-              className="rounded-3xl shadow-2xl h-[520px] w-full object-cover"
+              className="
+rounded-3xl
+shadow-2xl
+w-full
+h-[260px]
+sm:h-[360px]
+md:h-[450px]
+lg:h-[550px]
+object-cover
+"
             />
           </AnimatePresence>
 
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-orange-500 hover:text-white transition"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-orange-500 hover:text-white transition"
           >
             <ChevronLeft size={22} />
           </button>
@@ -265,7 +350,10 @@ export default function HeroSlider() {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center gap-3 mt-10">
+      <div
+        className="flex justify-center gap-3 mt-6
+sm:mt-10"
+      >
         {slides.map((_, i) => (
           <button
             key={i}

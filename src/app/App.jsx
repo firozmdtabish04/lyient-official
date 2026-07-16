@@ -33,7 +33,7 @@ function App() {
 
       {!hideLayout && <Navbar />}
 
-      <main className={hideLayout ? "" : "pt-[100px] sm:pt-[130px]"}>
+      <main className={hideLayout ? "" : "pt-0"}>
         <Outlet />
       </main>
 
