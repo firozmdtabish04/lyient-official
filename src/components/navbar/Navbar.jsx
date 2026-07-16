@@ -2,13 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ICONS } from "../ui/icons";
 import SearchOverlay from "../ui/SearchOverlay";
-import DropdownAi from "./dropdown/DropdownAi";
-import DropdownResources from "./dropdown/DropdownResources";
 import DropdownContact from "./dropdown/DropdownContact";
 import MobileDrawer from "./dropdown/MobileDrawer";
 import { Menu } from "lucide-react";
 import { isAuthenticated, getUser, logout } from "../../utils/auth";
 import lyient from "../../assets/Lyient.png";
+import DropdownPrograms from "./dropdown/DropdownPrograms";
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
   let user;
@@ -39,26 +38,6 @@ function Navbar() {
     { name: "LOR Generator", path: "/ai/lor", category: "AI" },
     { name: "Resume Analyzer", path: "/ai/resume", category: "AI" },
     { name: "Code Assistant", path: "/ai/code", category: "AI" },
-
-    // Resources
-    { name: "Resource Center", path: "/resources", category: "Resources" },
-    { name: "Blog", path: "/blog", category: "Resources" },
-    { name: "Docs", path: "/docs", category: "Resources" },
-    { name: "Changelog", path: "/changelog", category: "Resources" },
-    {
-      name: "Agency Growth Insights",
-      path: "/agency-insights",
-      category: "Resources",
-    },
-
-    { name: "Tools & Insights", path: "/tools", category: "Resources" },
-    {
-      name: "Lyient vs Competition",
-      path: "/compare",
-      category: "Resources",
-    },
-    { name: "Development Tools", path: "/dev-tools", category: "Resources" },
-    { name: "System Status", path: "/status", category: "Resources" },
 
     // Contact (cleaned)
     { name: "Contact", path: "/contact", category: "Contact" },
@@ -183,29 +162,22 @@ shadow-md"
               {/* DESKTOP */}
               <div className="hidden lg:flex items-center gap-4 xl:gap-6">
                 <Link to="/">Home</Link>
-                <Link to="/project">Projects</Link>
                 <Link to="/products">Products</Link>
+                <Link to="/our-services">Our Services</Link>
                 <Link to="/team">Our Team</Link>
-
-                <span
-                  onMouseEnter={() => handleEnter("resources")}
-                  className="nav-item"
-                >
-                  Resources <Chevron size={16} />
-                </span>
 
                 <span
                   onMouseEnter={() => handleEnter("contact")}
                   className="nav-item"
                 >
-                  Contact <Chevron size={16} />
+                  About Us <Chevron size={16} />
                 </span>
 
                 <span
                   onMouseEnter={() => handleEnter("ai")}
                   className="nav-item"
                 >
-                  AI <Chevron size={16} />
+                  Explore Us <Chevron size={16} />
                 </span>
 
                 <Search
@@ -279,9 +251,8 @@ transition"
               onMouseEnter={() => clearTimeout(timeoutRef.current)}
               onMouseLeave={handleLeave}
             >
-              {activeDropdown === "resources" && <DropdownResources />}
               {activeDropdown === "contact" && <DropdownContact />}
-              {activeDropdown === "ai" && <DropdownAi />}
+              {activeDropdown === "ai" && <DropdownPrograms />}
             </div>
           </div>
         )}

@@ -19,6 +19,8 @@ import CGPACalculator from "../pages/ai/CGPACalculator";
 import PercentageConverter from "../pages/ai/PercentageConverter";
 import PortfolioMaker from "../pages/ai/PortfolioMaker";
 import Team from "../pages/team/Team";
+import Programs from "../pages/ourServices/Programs";
+import OurServices from "../pages/ourServices/OurServices";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
       { path: "services", element: <Services /> },
       { path: "join-group", element: <JoinGroup /> },
       { path: "team", element: <Team /> },
+      { path: "our-services", element: <OurServices /> },
+      { path: "programs", element: <Programs /> },
       // 🔓 AUTH ROUTES (now normal routes)
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },

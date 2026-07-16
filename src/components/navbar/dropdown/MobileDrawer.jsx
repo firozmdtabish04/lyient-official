@@ -112,24 +112,7 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
             </Link>
           </div>
 
-          {/* ================= RESOURCES ================= */}
-          <div>
-            <button
-              onClick={() => toggle("resources")}
-              className="w-full flex justify-between items-center py-3 border-b border-gray-800"
-            >
-              <span>Resources</span>
-              <span>{active === "resources" ? "−" : "+"}</span>
-            </button>
-
-            {active === "resources" && (
-              <div className="pl-4 pt-3 space-y-2 text-gray-400 text-sm flex flex-col">
-                <Link to="/blog">Blog</Link>
-                <Link to="/docs">Docs</Link>
-                <Link to="/changelog">Changelog</Link>
-              </div>
-            )}
-          </div>
+          
 
           {/* ================= CONTACT ================= */}
           <div>

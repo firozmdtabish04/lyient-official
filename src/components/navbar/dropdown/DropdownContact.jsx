@@ -18,12 +18,7 @@ export default function DropdownContact() {
       desc: "Discover our mission, vision, and journey",
       path: "/about",
     },
-    {
-      icon: faCogs,
-      title: "Our Services",
-      desc: "Explore powerful solutions we offer",
-      path: "/services",
-    },
+
     {
       icon: faUsers,
       title: "Join Our Community",
@@ -34,7 +29,7 @@ export default function DropdownContact() {
 
   return (
     <div className="bg-[#111] border border-[#222] rounded-2xl p-6 shadow-xl">
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-2 gap-10">
         {contactItems.map((item, i) => (
           <Link
             key={i}
