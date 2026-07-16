@@ -1,7 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
 @layer components {
   .auth-input {
     @apply w-full rounded-xl border border-white/15 bg-black/25 px-4 py-3 pl-10 text-white outline-none transition placeholder:text-gray-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/20;
