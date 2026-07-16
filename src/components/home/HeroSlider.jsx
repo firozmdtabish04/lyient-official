@@ -80,7 +80,7 @@ const slides = [
   {
     id: 3,
     tag: "Lyient: Consulting Services in",
-    title: "Artificial Intelligence & Machine Learning",
+    title: "Machine Learning",
     highlight: "Artificial Intelligence",
     description:
       "Lyient provides AI Software Developmnent for its Clients who want to apply smart solutions to their business problems. Together we open up new AI opportunities that can - in as very real way - change the future",
@@ -115,8 +115,8 @@ const slides = [
   {
     id: 4,
     tag: "Lyient: AI Consulting Strategy, and Implementation",
-    title: "Artificial Intelligence & Machine Learning",
-    highlight: "Artificial Intelligence",
+    title: "Artificial Intelligence",
+    highlight: " Predictions",
     description:
       "Predict outcomes & prevent failures of your assets with custom Machine Learning Solutions.",
 
@@ -231,7 +231,7 @@ leading-tight font-black "
               </span>
             </h1>
             <p
-              className="mt-8 text-base
+              className="mt-2 text-base
 sm:text-lg
 leading-7
 sm:leading-8 text-gray-600  max-w-xl"
@@ -244,7 +244,7 @@ flex
 flex-col
 sm:flex-row
 gap-4
-mt-8
+mt-4
 "
             >
               <Link
@@ -267,12 +267,12 @@ grid
 grid-cols-3
 gap-4
 sm:gap-8
-mt-6
+mt-4
 sm:mt-10
 text-center
 "
             ></div>{" "}
-            <div className="flex gap-10 mt-14">
+            <div className="flex gap-10">
               <div>
                 <h2
                   className="text-xl
@@ -351,7 +351,7 @@ object-cover
 
       {/* Dots */}
       <div
-        className="flex justify-center gap-3 mt-6
+        className="flex justify-center gap-3 mt-2
 sm:mt-10"
       >
         {slides.map((_, i) => (
