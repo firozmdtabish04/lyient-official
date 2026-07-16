@@ -44,96 +44,129 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
         </div>
 
         {/* Scrollable Content */}
-        <div className="p-5 space-y-6 overflow-y-auto h-[calc(100%-80px)]">
-          {/* 🔍 SEARCH */}
+        <div className="p-5 space-y-5 overflow-y-auto h-[calc(100%-80px)]">
+          {/* Search */}
           <button
             type="button"
             onClick={handleSearch}
-            className="w-full bg-black border border-gray-700 rounded-lg px-4 py-3 text-sm text-left text-gray-300 hover:border-orange-400 hover:text-white transition"
+            className="w-full rounded-xl border border-gray-700 bg-black px-4 py-3 text-left text-gray-300 hover:border-orange-500 hover:text-white transition"
           >
-            Search anything...
+           Search anything...
           </button>
 
-          {/* 🔗 MAIN LINKS */}
-          <div className="space-y-3 border-b border-gray-800 pb-4">
-            <Link to="/" onClick={() => setOpen(false)}>
+          {/* Main Navigation */}
+          <div className="space-y-4">
+            <Link
+              to="/"
+              onClick={() => setOpen(false)}
+              className="block py-2 hover:text-orange-400 transition"
+            >
               Home
             </Link>
-          </div>
-          <div className="space-y-3 border-b border-gray-800 pb-4">
-            <Link to="/project" onClick={() => setOpen(false)}>
-              Projects
-            </Link>
-          </div>
-          <div className="space-y-3 border-b border-gray-800 pb-4">
-            <Link to="/products" onClick={() => setOpen(false)}>
+
+            <Link
+              to="/products"
+              onClick={() => setOpen(false)}
+              className="block py-2 hover:text-orange-400 transition"
+            >
               Products
             </Link>
-          </div>
 
-          {/* ================= AI ================= */}
-          <div>
-            <button
-              onClick={() => toggle("ai")}
-              className="w-full flex justify-between items-center py-3 border-b border-gray-800"
+            <Link
+              to="/our-services"
+              onClick={() => setOpen(false)}
+              className="block py-2 hover:text-orange-400 transition"
             >
-              <span>AI Tools</span>
-              <span>{active === "ai" ? "−" : "+"}</span>
-            </button>
+              Our Services
+            </Link>
 
-            {active === "ai" && (
-              <div className="pl-4 pt-3 space-y-2 text-gray-400 text-sm flex flex-col">
-                <Link to="/ai/chatbot" onClick={() => setOpen(false)}>
-                  AI Chatbot
-                </Link>
-                <Link to="/ai/pdf" onClick={() => setOpen(false)}>
-                  PDF Summarizer
-                </Link>
-                <Link to="/ai/offer-letter" onClick={() => setOpen(false)}>
-                  Offer Letter Generator
-                </Link>
-                <Link to="/ai/lor" onClick={() => setOpen(false)}>
-                  LOR Generator
-                </Link>
-                <Link to="/ai/resume" onClick={() => setOpen(false)}>
-                  Resume Analyzer
-                </Link>
-                <Link to="/ai/code" onClick={() => setOpen(false)}>
-                  Code Assistant
-                </Link>
-              </div>
-            )}
-          </div>
-
-          {/* ================= SOLUTIONS ================= */}
-          <div className="space-y-3 border-b border-gray-800 pb-4">
-            <Link to="/team" onClick={() => setOpen(false)}>
+            <Link
+              to="/team"
+              onClick={() => setOpen(false)}
+              className="block py-2 hover:text-orange-400 transition"
+            >
               Our Team
             </Link>
           </div>
 
-          
-
-          {/* ================= CONTACT ================= */}
+          {/* About Us */}
           <div>
             <button
-              onClick={() => toggle("contact")}
+              onClick={() => toggle("about")}
               className="w-full flex justify-between items-center py-3 border-b border-gray-800"
             >
-              <span>Contact</span>
-              <span>{active === "contact" ? "−" : "+"}</span>
+              <span>About Us</span>
+              <span>{active === "about" ? "−" : "+"}</span>
             </button>
 
-            {active === "contact" && (
-              <div className="pl-4 pt-3 space-y-2 text-gray-400 text-sm flex flex-col">
-                <Link to="/services">Services</Link>
-                <Link to="/join-group">Community</Link>
+            {active === "about" && (
+              <div className="pl-4 pt-3 flex flex-col gap-3 text-gray-400 text-sm">
+                <Link to="/about" onClick={() => setOpen(false)}>
+                  About Company
+                </Link>
+
+                <Link to="/community" onClick={() => setOpen(false)}>
+                  Join Our Community
+                </Link>
               </div>
             )}
           </div>
 
-          {/* 🔐 AUTH */}
-          <div className="border-t border-gray-800 pt-4">
+          {/* Explore Us */}
+          <div>
+            <button
+              onClick={() => toggle("programs")}
+              className="w-full flex justify-between items-center py-3 border-b border-gray-800"
+            >
+              <span>Explore Us</span>
+              <span>{active === "programs" ? "−" : "+"}</span>
+            </button>
+
+            {active === "programs" && (
+              <div className="pl-4 pt-3 flex flex-col gap-3 text-gray-400 text-sm">
+                <Link to="/programs/internship" onClick={() => setOpen(false)}>
+                  Internship Program
+                </Link>
+
+                <Link
+                  to="/programs/live-projects"
+                  onClick={() => setOpen(false)}
+                >
+                  Live Projects
+                </Link>
+
+                <Link to="/programs/workshops" onClick={() => setOpen(false)}>
+                  Technical Workshops
+                </Link>
+
+                <Link
+                  to="/programs/certifications"
+                  onClick={() => setOpen(false)}
+                >
+                  Certifications
+                </Link>
+
+                <Link to="/programs/placement" onClick={() => setOpen(false)}>
+                  Placement Support
+                </Link>
+
+                <Link to="/programs/career" onClick={() => setOpen(false)}>
+                  Career Development
+                </Link>
+
+                <Link
+                  to="/programs"
+                  onClick={() => setOpen(false)}
+                  className="text-orange-400 font-medium"
+                >
+                  View All Programs →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Login / Logout */}
+          <div className="border-t border-gray-800 pt-5">
             {isAuthenticated() ? (
               <button
                 onClick={() => {
@@ -151,10 +184,15 @@ export default function MobileDrawer({ open, setOpen, onSearchOpen }) {
             )}
           </div>
 
-          {/* 🚀 CTA */}
-          <button className="w-full bg-white text-black py-3 rounded-lg font-medium hover:bg-gray-200 transition">
-            <Link to="/products">Try for free</Link>
-          </button>
+          {/* CTA */}
+
+          <Link
+            to="/products"
+            onClick={() => setOpen(false)}
+            className="block w-full text-center bg-white text-black py-3 rounded-xl font-semibold hover:bg-gray-200 transition"
+          >
+            Try for Free
+          </Link>
         </div>
       </div>
     </>
